@@ -1,3 +1,6 @@
+FROM tomcat:9-jre11
+ARG BUILD_ARCH
+
 ENV \
   GUAC_VER=1.2.0 \
   GUACAMOLE_HOME=/app/guacamole \
