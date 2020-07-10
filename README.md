@@ -1,4 +1,4 @@
-Apachew Guacamole for Homeassistant
+Apache Guacamole for Homeassistant
 
 More info abaout Guacamole: https://guacamole.apache.org/
 
