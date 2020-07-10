@@ -1,5 +1,5 @@
 {
-  "name": "Homeassistant Apache Guacamole",
+  "name": "Apache Guacamole for Homeassistant",
   "url": "https://github.com/bleakvin/hass-guacamole",
   "maintainer": "bleakvin"
 }
