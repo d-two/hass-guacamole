@@ -1,4 +1,5 @@
-FROM amd64/tomcat:9-jre11
+FROM arm32v7/tomcat:9-jre11
+COPY qemu-arm-static /usr/bin
 
 ENV \
   GUAC_VER=1.2.0 \
@@ -10,10 +11,10 @@ ENV \
   
 # Apply the s6-overlay
 
-RUN curl -SLO "https://github.com/just-containers/s6-overlay/releases/download/v1.20.0.0/s6-overlay-amd64.tar.gz" \
-  && tar -xzf s6-overlay-amd64.tar.gz -C / \
-  && tar -xzf s6-overlay-amd64.tar.gz -C /usr ./bin \
-  && rm -rf s6-overlay-amd64.tar.gz \
+RUN curl -SLO "https://github.com/just-containers/s6-overlay/releases/download/v1.20.0.0/s6-overlay-armhf.tar.gz" \
+  && tar -xzf s6-overlay-armhf.tar.gz -C / \
+  && tar -xzf s6-overlay-armhf.tar.gz -C /usr ./bin \
+  && rm -rf s6-overlay-armhf.tar.gz \
   && mkdir -p ${GUACAMOLE_HOME} \
     ${GUACAMOLE_HOME}/lib \
     ${GUACAMOLE_HOME}/extensions;
@@ -31,7 +32,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Link FreeRDP to where guac expects it to be
-RUN ln -s /usr/local/lib/freerdp /usr/lib/x86_64-linux-gnu/freerdp || exit 0
+RUN ln -s /usr/local/lib/freerdp /usr/lib/arm-linux-gnueabihf/freerdp || exit 0
 
 # Install guacamole-server
 RUN curl -SLO "http://apache.org/dyn/closer.cgi?action=download&filename=guacamole/${GUAC_VER}/source/guacamole-server-${GUAC_VER}.tar.gz" \
