@@ -4,7 +4,7 @@ More info about Guacamole: https://guacamole.apache.org/
 
 based on: https://github.com/oznu/docker-guacamole
 
-# Docker Guacamole
+# Guacamole for Homeassistant
 
 A Docker Container for [Apache Guacamole](https://guacamole.apache.org/), a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.
 
@@ -20,7 +20,7 @@ This container runs the guacamole web client, the guacd server and a postgres da
 docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
-  oznu/guacamole
+  thedtwo/guacamole
 ```
 
 ## Raspberry Pi / ARMv6
@@ -31,7 +31,18 @@ This image will also allow you to run [Apache Guacamole](https://guacamole.apach
 docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
-  oznu/guacamole:armhf
+  thedtwo/guacamole:latest-armhf
+```
+
+## Raspberry Pi4 8GB Ram / ARMv8
+
+This image will also allow you to run [Apache Guacamole](https://guacamole.apache.org/) on a Raspberry Pi or other Docker-enabled ARMv8 devices by using the `latest-aarch64` tag.
+
+```shell
+docker run \
+  -p 8080:8080 \
+  -v </path/to/config>:/config \
+  thedtwo/guacamole:latest-aarch64
 ```
 
 ## Parameters
@@ -53,7 +64,7 @@ docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
   -e "EXTENSIONS=auth-ldap,auth-duo"
-  oznu/guacamole
+  thedtwo/guacamole
 ```
 
 Currently the available extensions are:
@@ -80,7 +91,7 @@ Mapped volumes behave differently when running Docker for Windows and you may en
 version: "2"
 services:
   guacamole:
-    image: oznu/guacamole
+    image: thedtwo/guacamole
     container_name: guacamole
     volumes:
       - postgres:/config
@@ -93,7 +104,7 @@ volumes:
 
 ## License
 
-Copyright (C) 2017-2020 oznu
+Copyright (C) 2020 d-two
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
