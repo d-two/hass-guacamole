@@ -25,7 +25,7 @@
   "options": {},
   "schema": {},
   "ports": {
-    "8080/tcp": 0
+    "8080/tcp": null
   },
   "ports_description": {
     "8080/tcp": "Webfrontend"
