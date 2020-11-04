@@ -22,8 +22,12 @@
   "ingress": true,
   "ingress_port": 8080,
   "image": "thedtwo/guacamole",
-  "options": {},
-  "schema": {},
+  "options": {
+    "data_path": "/config/guacamole",
+    "user_name": "guacadmin",
+    "user_pass": "guacadmin",
+    "extensions": []
+  },
   "ports": {
     "8080/tcp": null
   },
