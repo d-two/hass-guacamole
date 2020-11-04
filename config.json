@@ -28,7 +28,12 @@
     "8080/tcp": null
   },
   "ports_description": {
-    "8080/tcp": "Webfrontend"
+    "8080/tcp": "Web interface (Not required for Home Assistant Ingress)"
+  },
+  "schema": {
+    "certfile": "str?",
+    "keyfile": "str?",
+    "ssl": "bool?"
   },
   "hassio_role": "default"
 }
