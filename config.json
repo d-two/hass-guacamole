@@ -21,7 +21,7 @@
   "panel_icon": "mdi:remote-desktop",
   "ingress": true,
   "ingress_port": 8080,
-  "image": "thedtwo/guacamole-{arch}",
+  "image": "thedtwo/guacamole-base",
   "options": {
     "data_path": "/config/guacamole",
     "user_name": "guacadmin",
