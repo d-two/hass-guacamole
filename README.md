@@ -1,8 +1,6 @@
 Apache Guacamole for Homeassistant
+https://github.com/d-two/docker-multiarch-guacamole
 
-More info about Guacamole: https://guacamole.apache.org/
-
-based on: https://github.com/oznu/docker-guacamole
 
 # Guacamole for Homeassistant
 
