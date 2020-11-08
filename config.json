@@ -12,22 +12,12 @@
   "url": "https://guacamole.apache.org/",
   "webui": "http://[HOST]:[PORT:8080]",
   "startup": "application",
-  "map": [
-    "media:rw",
-    "share:rw",
-    "ssl"
-  ],
   "boot": "auto",
   "panel_icon": "mdi:remote-desktop",
   "ingress": true,
   "ingress_port": 8080,
-  "image": "thedtwo/guacamole",
-  "options": {
-    "data_path": "/config/guacamole",
-    "user_name": "guacadmin",
-    "user_pass": "guacadmin",
-    "extensions": []
-  },
+  "image": "thedtwo/guacamole-base",
+  "options": {},
   "ports": {
     "8080/tcp": null
   },
