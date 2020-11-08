@@ -19,12 +19,10 @@
   "image": "thedtwo/guacamole-base",
   "options": {},
   "ports": {
-    "8080/tcp": null,
-    "3389/tcp": null
+    "8080/tcp": null
   },
   "ports_description": {
-    "8080/tcp": "Web interface (Not required for Home Assistant Ingress)",
-    "3389/tcp": "RDP"
+    "8080/tcp": "Web interface (Not required for Home Assistant Ingress)"
   },
   "schema": {
     "certfile": "str?",
