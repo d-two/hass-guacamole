@@ -18,7 +18,7 @@ This container runs the guacamole web client, the guacd server and a postgres da
 docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
-  thedtwo/guacamole
+  thedtwo/guacamole-base
 ```
 
 ## Raspberry Pi / ARMv6
@@ -29,7 +29,7 @@ This image will also allow you to run [Apache Guacamole](https://guacamole.apach
 docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
-  thedtwo/guacamole:latest-armhf
+  thedtwo/guacamole-base:latest-armhf
 ```
 
 ## Raspberry Pi4 8GB Ram / ARMv8
@@ -40,7 +40,7 @@ This image will also allow you to run [Apache Guacamole](https://guacamole.apach
 docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
-  thedtwo/guacamole:latest-aarch64
+  thedtwo/guacamole-base:latest-aarch64
 ```
 
 ## Parameters
@@ -62,7 +62,7 @@ docker run \
   -p 8080:8080 \
   -v </path/to/config>:/config \
   -e "EXTENSIONS=auth-ldap,auth-duo"
-  thedtwo/guacamole
+  thedtwo/guacamole-base
 ```
 
 Currently the available extensions are:
@@ -89,7 +89,7 @@ Mapped volumes behave differently when running Docker for Windows and you may en
 version: "2"
 services:
   guacamole:
-    image: thedtwo/guacamole
+    image: thedtwo/guacamole-base
     container_name: guacamole
     volumes:
       - postgres:/config
