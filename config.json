@@ -10,7 +10,6 @@
     "panel_icon": "mdi:remote-desktop",
     "ingress": true,
     "ingress_port": 8080,
-    "image": "bleakvin/hass-guacamole-{arch}",
     "options": {},
     "schema": {},
     "ports": {}
