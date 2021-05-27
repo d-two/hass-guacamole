@@ -1,6 +1,8 @@
 FROM tomcat:9-jre11
 ARG BUILD_ARCH
 
+LABEL version="1.3.0"
+
 ENV \
   GUAC_VER=1.3.0 \
   GUACAMOLE_HOME=/app/guacamole \
