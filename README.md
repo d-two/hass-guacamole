@@ -1,3 +1,7 @@
+## This Repository is deprecated and will no longer be supported.
+
+
+
 ## Installation
 1. Add the repository URL under **Supervisor → Add-on Store → ⋮ → Repositories**:
 
