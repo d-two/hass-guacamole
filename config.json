@@ -1,6 +1,6 @@
 {
     "name": "Guacamole",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "slug": "haguacamole",
     "description": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.",
     "arch": [
@@ -15,7 +15,7 @@
     "panel_icon": "mdi:remote-desktop",
     "ingress": true,
     "ingress_port": 8080,
-    "image": "bleakvin/ha-guacamole",
+    "image": "abesnier/guacamole:1.4.0",
     "options": {},
     "ports": {
     "8080/tcp": null
